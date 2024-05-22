@@ -1,0 +1,147 @@
+/* .main {
+    display: flex;
+    flex-flow: column;
+    margin: auto;
+    width: 600px;
+    border: 3px solid green;
+    padding: 10px;
+}
+
+.center {
+    width: auto;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+#button {
+    margin: 10px;
+}
+
+#password {
+    margin: 10px;
+} */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.main {
+    display: flex;
+    flex-flow: column;
+    margin: auto;
+    width: 600px;
+    border: 3px solid green;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.center {
+    width: auto;
+    margin: auto;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#button {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#button:hover {
+    background-color: darkgreen;
+}
+
+#password {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: calc(100% - 22px);
+}
+
+input[type="text"], input[type="password"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="range"] {
+    width: 100%;
+    margin: 10px 0;
+    -webkit-appearance: none;
+    background: #ddd;
+    height: 8px;
+    border-radius: 5px;
+    outline: none;
+    transition: background 0.3s;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: green;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: green;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+
+input[type="range"]:hover {
+    background: #ccc;
+}
+
+input[type="range"]:hover::-webkit-slider-thumb {
+    background: darkgreen;
+}
+
+input[type="range"]:hover::-moz-range-thumb {
+    background: darkgreen;
+}
+
+label {
+    margin: 10px 0 5px 0;
+    font-weight: bold;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #777;
+}

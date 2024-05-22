@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Simple Password Generator</title>
+</head>
+<body>
+    <div class="main">
+        <h1>simple password generator</h1>
+        <input type="text" id="password" onclick="copyToClipboard()">
+        <output class="center" id="length_text">password length: 0</output>
+        <input type="range" name="length" id="length" min="8" max="64" value="16" oninput="this.previousElementSibling.value = 'password length: '+ this.value">
+        <button type="button" id="button" onclick="generate()">generate password</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
