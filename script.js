@@ -1,8 +1,15 @@
-const print = console.log
 generate = function() {
-    var result           = '';
-    var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+';
-    var charactersLength = characters.length;
+    var result              = '';
+    var characters_lowercase  = 'abcdefghijklmnopqrstuvwxyz';
+    var characters_uppercase  = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    var characters_numbers  = '0123456789';
+    var characters_specials = '!@#$%^&*()_+';
+
+    const uppercase           = document.getElementById('uppercase');
+    const numbers           = document.getElementById('numbers');
+    const specials          = document.getElementById('specials');
+    var characters          = characters_lowercase + (uppercase.checked === true ? characters_uppercase : '') + (numbers.checked === true ? characters_numbers : '') + (specials.checked === true ? characters_specials : '');
+    var charactersLength    = characters.length;
 
     for ( var i = 0; i <= document.getElementById('length').value; i++ ) {
       result += characters.charAt(Math.floor(Math.random() * charactersLength));

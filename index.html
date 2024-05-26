@@ -11,7 +11,16 @@
         <h1>simple password generator</h1>
         <input type="text" id="password" onclick="copyToClipboard()">
         <output class="center" id="length_text">password length: 0</output>
-        <input type="range" name="length" id="length" min="8" max="64" value="16" oninput="this.previousElementSibling.value = 'password length: '+ this.value">
+        <input type="range" name="length" id="length" min="8" max="64" value="16" oninput="this.previousElementSibling.value = 'password length: '+ this.value; generate()">
+        <section class="selection">
+            <output class="center" id="uppercase_">uppercase letters</output>
+            <input type="checkbox" name="uppercase letters" id="uppercase" onclick="generate()">
+            <output class="center" id="specials_">special characters</output>
+            <input type="checkbox" name="special characters" id="specials" onclick="generate()">
+            <output class="center" id="numbers_">numbers</output>
+            <input type="checkbox" name="numbers" id="numbers" onclick="generate()">
+        </section>
+        <!-- <input type="checkbox" name="special characters" id="specials"> -->
         <button type="button" id="button" onclick="generate()">generate password</button>
     </div>
     <script src="script.js"></script>
